@@ -1,10 +1,5 @@
 https://archive.ics.uci.edu/dataset/545/rice+cammeo+and+osmancik
 https://archive.ics.uci.edu/dataset/186/wine+quality
-https://archive.ics.uci.edu/dataset/228/sms+spam+collection
-https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition
-https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits
-https://archive.ics.uci.edu/dataset/110/yeast
 https://archive.ics.uci.edu/dataset/267/banknote+authentication
-https://archive.ics.uci.edu/dataset/183/communities+and+crime
-https://archive.ics.uci.edu/dataset/373/drug+consumption+quantified
-https://archive.ics.uci.edu/dataset/149/statlog+vehicle+silhouettes
+https://archive.ics.uci.edu/dataset/1/abalone
+https://archive.ics.uci.edu/dataset/471/electrical+grid+stability+simulated+data
