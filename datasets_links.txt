@@ -3,3 +3,6 @@ https://archive.ics.uci.edu/dataset/186/wine+quality
 https://archive.ics.uci.edu/dataset/267/banknote+authentication
 https://archive.ics.uci.edu/dataset/1/abalone
 https://archive.ics.uci.edu/dataset/471/electrical+grid+stability+simulated+data
+https://archive.ics.uci.edu/dataset/850/raisin
+https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset
+https://archive.ics.uci.edu/dataset/110/yeast
