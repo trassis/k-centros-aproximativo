@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 import random
 import time
 import sklearn as skl
@@ -71,25 +70,17 @@ class experimento:
 
         largura_final = largura*(hi - lo)
         
+        ultima_solucao = None
         while abs(hi - lo) > largura_final:
             mid = (lo+hi)/2
-            if len(self.aprox_raio(mid)) <= self.K:
+            solucao = self.aprox_raio(mid)
+            if len(solucao) <= self.K:
+                ultima_solucao = solucao
                 hi = mid
             else:
                 lo = mid
 
-        # Corrige re erro numérico causa raio ser muito pequeno
-        r = (hi+lo)/2
-        centros = self.aprox_raio(r)
-        while len(centros) > self.K:
-            centros = self.aprox_raio(r)
-            r += largura
-            
-        # Adiciona um centro arbitrário se só encontrou 1 único
-        # Isso é feito pois silhueta não funciona para só um centro
-        if len(centros) == 1:
-            centros.append((centros[0]+1)%self.N)
-        
+        centros = ultima_solucao
         return centros 
 
     # Retorna solução aproximada no máximo 2*ótimo com método incremental
@@ -156,7 +147,11 @@ class experimento:
             
             tempo[i] = final - inicial
             raio[i] = self._calcular_raio(resposta)
-            silhueta[i] = skl.metrics.silhouette_score(self.pontos, resposta)
+            try:
+                silhueta[i] = skl.metrics.silhouette_score(self.pontos, resposta)
+            except:
+                silhueta[i] = -1
+
             rand[i] = skl.metrics.adjusted_rand_score(self.labels, resposta)
             
         dados_tempo = [ np.mean(tempo), np.std(tempo) ]
@@ -184,7 +179,10 @@ class experimento:
             
             tempo[i] = final - inicial
             raio[i] = self._calcular_raio(resposta)
-            silhueta[i] = skl.metrics.silhouette_score(self.pontos, resposta)
+            try:
+                silhueta[i] = skl.metrics.silhouette_score(self.pontos, resposta)
+            except:
+                silhueta[i] = -1
             rand[i] = skl.metrics.adjusted_rand_score(self.labels, resposta)
             
         dados_tempo = [ np.mean(tempo), np.std(tempo) ]
@@ -213,7 +211,10 @@ class experimento:
             
             tempo[i] = final - inicial
             raio[i] = self._calcular_raio(resposta)
-            silhueta[i] = skl.metrics.silhouette_score(self.pontos, resposta)
+            try:
+                silhueta[i] = skl.metrics.silhouette_score(self.pontos, resposta)
+            except:
+                silhueta[i] = -1
             rand[i] = skl.metrics.adjusted_rand_score(self.labels, resposta)
             
         dados_tempo = [ np.mean(tempo), np.std(tempo) ]
