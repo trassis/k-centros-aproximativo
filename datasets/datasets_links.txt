@@ -6,3 +6,4 @@ https://archive.ics.uci.edu/dataset/471/electrical+grid+stability+simulated+data
 https://archive.ics.uci.edu/dataset/850/raisin
 https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset
 https://archive.ics.uci.edu/dataset/110/yeast
+https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits

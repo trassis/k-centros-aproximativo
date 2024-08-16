@@ -1,22 +1,9 @@
-# O que tem que ser feito:
+# K centros aproximativo
 
-Implementar 2 algoritmos aproximados para k-centros.
-- Intervalo de raio ótimo é refinado até uma largura definida
-- Centros escolhidos para maximizar a distância entre os centros previamente escolhidos.
+ Esse repositório corresponde a um trabalho prático da disciplina Algoritmos 2, sobre análise experimental de algoritmos aproximativos para o Problema dos K-Centros. 
 
-Implementar a métrica de Minkowski para p=1 e p=2
+ Há um relatório do trabalho no arquivo `relatorio.pdf`.
 
-Conjuntos de dados:
-- Dados da UCIMLR: 10 conjuntos com no mínimo 700 exemplos.  
-- Dados de scikit
-- Dados da média
+ Os bancos de dados utilizados podem ser encontrados na pasta `./datasets`, bem como links para eles em `./datasets/datasets_links.txt`.
 
-Para cada conjunto, deve ser feito 30 testes para cada algoritmo.
-(A matriz de distância so deve ser computada uma vez).
-Cada execução deve guardar tempo de execução, o raio da solução e a avaliação da solução pelas métricas: silhueta e índice de Rand ajustado.
-
-Algoritmo de refinamento tem um caso especial.
-
-
-O resultado final deve ser agregado em uma tabela com respectivas médias e desvios padrão por exeperimento e por algoritmo
-
+ Os resultados dos experimentos podem ser encontrados nos notebooks `./testes_normal.ipynb`, `./testes_sklearn.ipynb` e `./testes_uci.ipynb`. Já os arquivos referentes as extrações de dados são `./dados_uci.py`, `./dados_normal.py` e `./dados_sklearn.py`. Por fim, a implemtação dos algoritmos se encontra em `./experimento.py`.
